@@ -2,10 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Array Cardio 💪</title>
+  <title>Database Panel</title>
+  <link rel="stylesheet" href="./style.css" />
   <script src="./index.js" defer></script>
 </head>
 <body>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <div id="root">
+    <div class="tools>">
+      <input type="button" value="Show All" onclick="search()" />
+    </div>
+    <div class="search">
+      <input type="text" name="search-input" placeholder="Enter Search Query" />
+      <div class="search-type">
+        <p>Sort by</p>
+        <div class="search-type-input">
+          <input type="radio" id="id" name="sort" value="id" checked>
+          <label for="id">ID</label>
+          <input type="radio" id="fname" name="sort" value="first_name">
+          <label for="fname">First Name</label>
+          <input type="radio" id="lname" name="sort" value="last_name">
+          <label for="lname">Last Name</label>
+          <input type="radio" id="email" name="sort" value="email">
+          <label for="email">Email</label>
+          <input type="radio" id="gender" name="sort" value="gender">
+          <label for="gender">Gender</label>
+          <input type="radio" id="ip" name="sort" value="ip_address">
+          <label for="ip">IP Address</label>
+        </div>
+      </div>
+      <input type="button" value="Search" onclick="search()"/>
+    </div>
+    <div class="result">
+      <table id="result-table">
+      </table>
+    </div>
+  </div>
 </body>
 </html>
